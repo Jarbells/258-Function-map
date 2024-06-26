@@ -26,14 +26,8 @@ public class Product {
 		this.price = price;
 	}
 	
-	// O método estático acessa o atributo do que eu passar como argumento.
-	public static void staticPriceUpdate(Product p) {
-		p.setPrice(p.getPrice() * 1.1);
-	}
-	
-	// O método não estático acessa o atributo da própria instância.
-	public void nonStaticPriceUpdate() {
-		price *= 1.1;
+	public static String staticUpperCaseName(Product p) {
+		return p.getName().toUpperCase();
 	}
 
 	@Override
